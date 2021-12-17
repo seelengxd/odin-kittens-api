@@ -1,0 +1,6 @@
+<h1>MEOW I AM <%= @kitten.name %></h1>
+<p>I am <%= @kitten.age %> </p>
+<p> Softness: <%= @kitten.softness %></p>
+<p> Cuteness: <%= @kitten.cuteness %></p>
+<%= link_to 'Go back', kittens_path %>
+<%= link_to 'Update Kitten', edit_kitten_path(@kitten) %>

@@ -1,0 +1,24 @@
+<h1>Kittens API </h1>
+<% if flash[:success] %>
+<p> <%= flash[:success] %> </p>
+<% end %>
+
+<%= link_to 'New Kitten', new_kitten_path%>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Cuteness</td>
+        <td>Softness</td>
+        <td>Delete</td>
+    </tr>
+    <% @kittens.each do |kitten| %>
+    <tr>
+        <td><%= link_to kitten.name, kitten %></td>
+        <td><%= kitten.age %></td>
+        <td><%= kitten.cuteness %></td>
+        <td><%= kitten.softness %></td>
+        <td><%= link_to 'Destroy Kitten', kitten, method:'delete' %>
+    </tr>
+    <% end %>
+</table>

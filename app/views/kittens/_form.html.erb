@@ -1,0 +1,20 @@
+<%= form_with model: kitten do |f| %>
+<% unless kitten.errors.size.zero?  %>
+    <% kitten.errors.full_messages.each do |message| %>
+        <p> haha <%= message %> </p>
+    <% end %>
+<% end %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br/><br/>
+<%= f.label :age %>
+<%= f.number_field :age %>
+<br/><br/>
+<%= f.label :softness %>
+<%= f.number_field :softness %>
+<br/><br/>
+<%= f.label :cuteness %>
+<%= f.number_field :cuteness %>
+<br/><br/>
+<%= f.submit %> 
+<% end %>
